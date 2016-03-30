@@ -84,14 +84,14 @@ else
 fi
 
 # MEMCACHED
-echo "Installing memcached... (Step 10/12)"
+echo "Installing memcached..."
 cp assets/memcached /etc/sysconfig/
 dos2unix -q /etc/sysconfig/memcached
 systemctl enable memcached > /dev/null 2>&1
 systemctl start memcached > /dev/null 2>&1
 
 # virtualenvwrapper - enum34 causes conflicts.
-echo "Configuring virtualenv and virtualenvwrapper settings... (Step 11/12)"
+echo "Configuring virtualenv and virtualenvwrapper settings..."
 pip uninstall -y enum34 --quiet > /dev/null 2>&1
 
 cp assets/bashrc.txt /etc/skel/.bashrc
