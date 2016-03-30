@@ -93,6 +93,5 @@ systemctl start memcached > /dev/null 2>&1
 # virtualenvwrapper - enum34 causes conflicts.
 echo "Configuring virtualenv and virtualenvwrapper settings... (Step 11/12)"
 pip uninstall -y enum34 --quiet > /dev/null 2>&1
-export WORKON_HOME=/home/vagrant/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-cp assets/bashrc.sh /home/vagrant/.bashrc
+
+cp assets/bashrc.txt /etc/skel/.bashrc
